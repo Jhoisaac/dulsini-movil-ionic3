@@ -1,0 +1,27 @@
+<ion-menu [content]="restaurant">
+
+  <ion-header>
+    <ion-toolbar  color="danger">
+
+      <ion-title text-center>
+        <ion-buttons>
+          <button ion-button icon-left>
+            <ion-icon name="ios-restaurant"></ion-icon>
+          </button>
+        </ion-buttons>
+        Dulssini</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="irPagina(menuDiario)"><ion-icon name="ios-home"></ion-icon>&nbsp;&nbsp;&nbsp;Menu Diario</button>
+      <button ion-item (click)="irPagina(productos)"><ion-icon name="md-apps"></ion-icon>&nbsp;&nbsp;&nbsp;Productos</button>
+      <button ion-item (click)="irPagina(carrito)"><ion-icon name="md-cart"></ion-icon>&nbsp;&nbsp;&nbsp;My Cart</button>
+      <button ion-item (click)="irPagina(finalizar)"><ion-icon name="md-send"></ion-icon>&nbsp;&nbsp;&nbsp;Finalizar Compra</button>
+      <button ion-item (click)="irPagina(login)"><ion-icon name="md-exit"></ion-icon>&nbsp;&nbsp;&nbsp;Login</button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #restaurant></ion-nav>
